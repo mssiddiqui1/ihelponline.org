@@ -184,9 +184,40 @@
 								<h2 class="mu-title">Schedule Detail</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis unde, ut sapiente et voluptatum facilis consectetur incidunt provident asperiores at necessitatibus nulla sequi voluptas libero quasi explicabo veritatis minima porro.</p>
 							</div>
+
+							<style>
+								.responsiveCal {
+								position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+								}
+								 
+								.responsiveCal iframe {
+								position: absolute; top:0; left: 0; width: 100%; height: 100%;
+								}
+								
+								@media all and (min-width: 768px) {
+									.deskContent {display:block;}
+									.phoneContent {display:none;}
+								}
+								
+								@media all and (max-width: 767px) {
+									.deskContent {display:none;}
+									.phoneContent {display:block;}
+								}
+							</style>
+
 							
 							<div class="mu-schedule-content-area">
-							<center><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showTitle=0&showPrint=0&src=MTNkMTBlMzU2OGM3MGZjMTZiYmQxMDg2YTA4MTk0YzdjYTlkODQzZWM2MDE5ODE5MGYzYjM1MWJiOWZmYmU1OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></center>
+							<center>
+							<div class="responsiveCal">
+
+								<div class="deskContent"><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showTitle=0&showPrint=0&src=MTNkMTBlMzU2OGM3MGZjMTZiYmQxMDg2YTA4MTk0YzdjYTlkODQzZWM2MDE5ODE5MGYzYjM1MWJiOWZmYmU1OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+								  </div>
+								<div class="phoneContent"><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&mode=AGENDA&showTitle=0&showPrint=0&src=MTNkMTBlMzU2OGM3MGZjMTZiYmQxMDg2YTA4MTk0YzdjYTlkODQzZWM2MDE5ODE5MGYzYjM1MWJiOWZmYmU1OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+								</div>
+							</div>
+							</center>
+							
+						
 							</div>
 							<!--
 
@@ -483,6 +514,7 @@
 			</div>
 		</section>
 		<!-- End Speakers -->
+		
 
 		<!-- Start Venue -->
 		<section id="mu-venue">
